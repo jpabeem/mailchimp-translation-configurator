@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import vSelect from 'vue-select'
 import App from './App';
 
 import HomeComponent from './components/Home.vue';
@@ -10,6 +11,8 @@ import FormFieldConfigurator from './components/FormFieldConfigurator.vue';
 
 Vue.config.productionTip = false;
 Vue.config.devtools = true;
+
+Vue.component('v-select', vSelect);
 
 Vue.component('browser-language-configurator',
   BrowserLanguageConfigurator
@@ -39,8 +42,13 @@ const FormField = {
 const router = new VueRouter({
   mode: 'history',
   base: __dirname,
-  routes: [{
-      path: '/mailchimp-translation-configurator',
+  routes: [
+    {
+      path: '*',
+      component: require('./components/NotFound.vue').default
+    },
+    {
+      path: '/mailchimp-translation-configurator/',
       name: 'home',
       component: require('./components/Home.vue').default
     },

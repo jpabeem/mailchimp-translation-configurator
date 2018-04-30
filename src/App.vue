@@ -127,7 +127,12 @@ body {
 
 .router-link-exact-active {
   color: rgba(255, 255, 255, 0.5);
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-bottom-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.router-link-exact-active:focus {
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom-color: rgba(255, 255, 255, 0.25) !important;
 }
 
 .nav-masthead .nav-link + .nav-link {
