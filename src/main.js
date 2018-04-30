@@ -40,17 +40,17 @@ const router = new VueRouter({
   mode: 'history',
   base: __dirname,
   routes: [{
-      path: '/',
+      path: '/mailchimp-translation-configurator',
       name: 'home',
       component: require('./components/Home.vue').default
     },
     {
-      path: '/browser-language',
+      path: '/mailchimp-translation-configurator/browser-language',
       name: 'browser-language',
       component: require('./components/BrowserLanguageConfigurator.vue').default
     },
     {
-      path: '/form-field',
+      path: '/mailchimp-translation-configurator/form-field',
       name: 'form-field',
       component: require('./components/FormFieldConfigurator.vue').default
     }
