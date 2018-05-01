@@ -48,7 +48,7 @@ const router = new VueRouter({
       component: require('./components/NotFound.vue').default
     },
     {
-      path: '/mailchimp-translation-configurator/',
+      path: '/mailchimp-translation-configurator//',
       name: 'home',
       component: require('./components/Home.vue').default
     },
